@@ -1,0 +1,21 @@
+<html>
+
+<head>
+	<title>Damage predictor</title>
+</head>
+
+<body>
+
+	<input type='file' id="input_img" accept="image/*" />
+	<canvas id="canvas_img"></canvas>
+	<button type="button" id="btn_predict">Predict Damages</button>
+
+
+	<script src="/static/js/axios.min.js"></script>
+	<script src="/static/js/predictor.js"></script>
+	<script type="text/javascript">
+		var predictor = Predictor("input_img", "canvas_img");
+		document.getElementById("btn_predict").addEventListener("click", predictor.predict);
+	</script>
+</body>
+</html>
